@@ -21,5 +21,14 @@ generateEmailsElement.addEventListener("click", generateEmails);
 
 function generateEmails() {
   emailsElement.innerHTML = "";
-  for (let i = 0; i < emailsNumber; i++) {}
+  for (let i = 0; i < emailsNumber; i++) {
+    fetch(uri)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const { response: email } = data;
+        emailsElement.innerHTML += `<li>${email}</li>`;
+      });
+  }
 }
