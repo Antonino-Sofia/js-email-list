@@ -13,3 +13,13 @@ const emailsElement = document.getElementById("emails");
 const generateEmailsElement = document.getElementById("generate-emails");
 const url = "https://flynn.boolean.careers/exercises/api/random/mail";
 const emailsNumber = 10;
+
+//FETCH
+
+generateEmailsElement();
+generateEmailsElement.addEventListener("click", generateEmails);
+
+function generateEmails() {
+  emailsElement.innerHTML = "";
+  for (let i = 0; i < emailsNumber; i++) {}
+}
